@@ -2,12 +2,14 @@
 
 console.log('-- begin --');
 
+debugger;
+
 /**
- * _
+ * Tell if the text string is longer or shorter than the limit (cutoff).
  *
- * @_ {_} _ - _
- * @_ {_} _ - _
- * @_ {_} _
+ * @param {string} text - the text string to mesure.
+ * @param {number} cutoff - is the limit to tell if the text is short or long.
+ * @return {string} String that say if the text is long or short.
  */
 const longOrShort = (text, cutoff) => {
   if (text.length < cutoff) {
