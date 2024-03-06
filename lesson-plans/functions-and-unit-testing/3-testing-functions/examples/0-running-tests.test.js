@@ -25,6 +25,8 @@
 
 // go ahead and try running these lines of code with and without tests enabled:
 
+debugger;
+
 describe('boolean values', () => {
   it('true is true', () => {
     expect(true).toEqual(true);

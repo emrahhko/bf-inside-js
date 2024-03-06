@@ -2,11 +2,13 @@
 
 console.log('-- begin --');
 
+debugger;
+
 /**
- * _
+ * Tell if the text string is a palindrome or not and it's case sensitive.
  *
- * @_ {_} _ - _
- * @_ {_}  _
+ * @param  {string}  toCheck - The text that will be checked if it's a palindrome or not.
+ * @return {Boolean} Say if the text is a palindrome or not.
  */
 const isPalindrome = (toCheck) => {
   let reversed = '';
