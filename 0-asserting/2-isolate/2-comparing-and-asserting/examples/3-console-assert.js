@@ -2,6 +2,8 @@
 
 'use strict';
 
+debugger;
+
 console.log('-- begin --');
 
 /* console.assert takes two arguments
