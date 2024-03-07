@@ -2,6 +2,8 @@
 
 'use strict';
 
+debugger;
+
 console.log('-- begin --');
 
 // console.assert is a good way to test your understanding of code

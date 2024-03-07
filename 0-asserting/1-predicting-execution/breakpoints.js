@@ -1,5 +1,7 @@
 'use strict';
 
+// debugger;
+
 /* Devtool Breakpoints
 
   breakpoints will also pause your code on a specific line
