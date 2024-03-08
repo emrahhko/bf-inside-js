@@ -7,15 +7,15 @@ console.log('-- begin --');
 // fill in the blanks to pass the assertions
 //  there will only be one correct answer
 
-const _1_expect = _;
+const _1_expect = 'A';
 const _1_actual = true ? 'A' : 'B';
 console.assert(_1_actual === _1_expect, 'Test 1');
 
-const _2_expect = _;
+const _2_expect = 'A';
 const _2_actual = 1 ? 'A' : 'B';
 console.assert(_2_actual === _2_expect, 'Test 2');
 
-const _3_expect = _;
+const _3_expect = ;
 const _3_actual = null ? 'A' : 'B';
 console.assert(_3_actual === _3_expect, 'Test 3');
 
