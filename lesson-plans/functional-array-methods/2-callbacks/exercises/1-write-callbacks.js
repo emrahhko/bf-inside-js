@@ -1,7 +1,7 @@
 'use strict';
 
 // --- declare function that uses the callbacks ---
-
+console.log('------- begin ---------------');
 /**
  * Checks if something is true about a string.
  *
@@ -23,7 +23,15 @@ const checkIt = (text = '', cb) => {
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is a palindrome.
  */
-const isPalindrome = (str = '') => {};
+const isPalindrome = (str = '') => {
+  const len = str.length;
+  for (let i = 0; i < len / 2; i++) {
+    if (str[i] !== str[len - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const check1 = checkIt('RacEcaR', isPalindrome);
 console.assert(check1 === 'yes', 'Test 1');
@@ -43,8 +51,13 @@ console.assert(check3 === 'yes', 'Test 3');
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is JS.
  */
-const isJS = (txt = '') => {};
-
+const isJS = (txt = '') => {
+  if (txt.toLowerCase() === 'javascript' || txt.toLowerCase() === 'js') {
+    return true;
+  } else {
+    return false;
+  }
+};
 const check4 = checkIt('JavaSCripT', isJS);
 console.assert(check4 === 'yes', 'Test 4');
 
@@ -56,3 +69,5 @@ console.assert(check6 === 'yes', 'Test 6');
 
 const check7 = checkIt('js', isJS);
 console.assert(check7 === 'yes', 'Test 7');
+
+console.log('------- end ---------------');
