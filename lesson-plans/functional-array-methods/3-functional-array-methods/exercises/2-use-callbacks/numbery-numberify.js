@@ -6,5 +6,15 @@
  * @returns {number[]} an array containing numbers that aren't NaN
  */
 export const numberyNumberify = (arr) => {
-  
+  const newAr = [];
+  arr.forEach((item) => {
+    if(! isNaN(item)){
+      newAr
+  .push(Number(item));
+    }
+  });
+
+  return newAr;
 };
+
+// copy paste your code!
