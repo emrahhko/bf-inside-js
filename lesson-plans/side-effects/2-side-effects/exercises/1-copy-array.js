@@ -1,5 +1,8 @@
 'use strict';
 
+console.log('----------- start --------------');
+
+
 // prettier-ignore
 const deepCompare = (actual, expect) => actual === expect || Object.is(actual, expect) || (Object(actual) === actual && Object(expect) === expect) && (Array.isArray(actual) && Array.isArray(expect) && actual.length === expect.length && expect.every((expect, index) => deepCompare(actual[index], expect)) || Object.keys(actual).length === Object.keys(expect).length && Object.keys(expect).every((key) => deepCompare(actual[key], expect[key])));
 
@@ -9,7 +12,11 @@ const deepCompare = (actual, expect) => actual === expect || Object.is(actual, e
  * @param {number[]} [arr=[]] - __
  * @returns {number[]} __
  */
-const copyArray = () => {};
+const copyArray = (arr = []) => {
+  arr = [... arr];
+  return arr;
+  
+};
 
 const _1_arg = [1, 2, 3];
 const _1_returned = copyArray(_1_arg);
@@ -31,3 +38,6 @@ console.assert(
   deepCompare(_2_arg, [10, 11, 12, 13]),
   '2.c: _2_arg was not modified',
 );
+
+
+console.log('----------- end --------------');
