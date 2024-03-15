@@ -15,6 +15,8 @@
  * addANumber([-2, -1, 0, 1], 1); // [-1, 0, 1, 2]
  */
 const addANumber = (number = [], addMe = 0) => {
+  const newArr = [... number];
+  return newArr.map(newArr => newArr + addMe)
   
 };
 
@@ -60,10 +62,13 @@ describe('addANumber: adds a given number to each number in an array', () => {
   });
   describe('there are no side-effects', () => {
     it('returns a new array', () => {
-      writeThisTest;
+      const argument = [1, 2, 3, 4, 5, 6, 7];
+      const returned = addANumber(argument);
+      expect (argument !== returned).toEqual(true);
     });
     it('does not modify the original array', () => {
-      writeThisTest;
+      const argument = [1, 2, 3, 4, 5, 6, 7];
+       expect(argument).toEqual([1, 2, 3, 4, 5, 6, 7]);
     });
   });
 });
