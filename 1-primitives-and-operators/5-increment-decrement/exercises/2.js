@@ -7,8 +7,8 @@ console.log('-- begin --');
 let x = 0;
 
 let y = x--;
-console.assert(x === _, 'Test 1 x');
-console.assert(y === _, 'Test 1 y');
+console.assert(x === -1, 'Test 1 x');
+console.assert(y === -1, 'Test 1 y');
 
 x = ++y;
 console.assert(x === _, 'Test 2 x');
