@@ -20,7 +20,7 @@ console.log('-- begin --');
 // a readable way to do interpolation is using a variable for each slot
 
 const myName = 'roboto';
-const introduction = `i am ${myName}.`;
+const introduction = `i am ${myName}.`; 
 console.log(introduction);
 
 const myHomeTown = 'brussels';
