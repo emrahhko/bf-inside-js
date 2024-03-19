@@ -8,18 +8,18 @@ console.log('-- begin --');
 //  what do all solutions to the same path have in common?
 // or maybe there are unreachable paths!
 
-const value1 = _;
-const value2 = _;
+const value1 = false;
+const value2 = false;
 let path = '';
 
 if (value1 && !value2) {
-  path = 'if';
+  path = 'if'; // this path value1 = true value2 = false
 } else if (!value1 || !value2) {
-  path = 'else if 1';
+  path = 'else if 1'; // this path value1 = false value2 = true
 } else if (value2 && !value1) {
-  path = 'else if 2';
+  path = 'else if 2'; // this path is unreachable.
 } else {
-  path = 'else';
+  path = 'else'; // this path value1 = true value2 = true
 }
 
 console.log(path);

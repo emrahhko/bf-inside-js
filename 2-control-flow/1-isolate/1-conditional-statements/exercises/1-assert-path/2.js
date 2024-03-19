@@ -4,7 +4,7 @@
 
 console.log('-- begin --');
 
-// are there any unreachable paths?
+// are there any unreachable paths? Yes if and else if 1 are unreachable
 
 const value1 = 100;
 const value2 = '100';
@@ -18,6 +18,8 @@ if (value1 === value2) {
   path = 'else if 2';
 }
 
-console.assert(path === _);
+console.assert(path === "else if 2");
 
 console.log('-- end --');
+
+
