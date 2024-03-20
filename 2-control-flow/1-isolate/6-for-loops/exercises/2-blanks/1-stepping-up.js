@@ -21,16 +21,16 @@ console.log('-- begin --');
 
 */
 
-const toRepeat = '_';
+const toRepeat = 'howdy';
 const totalRepetitions = 4;
 
 let repeatedString = '';
 
-for (_; i < _; _) {
-  repeatedString += _;
-  console.log(repeatedString);
+for (let i = 0; i < totalRepetitions; i++) {
+  repeatedString += toRepeat;
+  // console.log(repeatedString);
 }
-
+console.log(repeatedString);
 console.assert(
   repeatedString === 'howdyhowdyhowdyhowdy',
   '"howdy" should be repeated 4 times',
