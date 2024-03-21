@@ -41,5 +41,11 @@ if (randomFrom1To3 === 1) {
 }
 
 /* -- BEGIN: check if the user was correct and let them know -- */
+const correct = correctAnswer === attempt;
+const result = correct
+  ? 'correct! phrase ' + randomFrom1To3 + " was ' " + correctAnswer + " ' "
+  : 'nope :(';
 
 /* -- END: check if the user was correct and let them know -- */
+
+alert(result);
