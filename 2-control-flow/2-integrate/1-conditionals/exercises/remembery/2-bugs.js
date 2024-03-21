@@ -33,7 +33,7 @@ while (input3 === '' || input3 === null) {
 alert('all saved! get ready to remember');
 
 const randomFrom1To3 = Math.ceil(Math.random() * 3);
-const userGuess = prompt('enter phrase number ', randomFrom1To3);
+const userGuess = prompt('enter phrase number ' + randomFrom1To3);
 
 let phraseToGuess = '';
 if (randomFrom1To3 === 1) {

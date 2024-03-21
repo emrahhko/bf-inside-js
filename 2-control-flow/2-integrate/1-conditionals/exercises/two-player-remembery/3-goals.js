@@ -29,8 +29,26 @@ const phrasesToRemember = `Player 2, remember these:
 `;
 alert(phrasesToRemember);
 
-/* -- BEGIN: gather player 2's guesses) -- */
+let score = 0;
 
+/* -- BEGIN: gather player 2's guesses) -- */
+const guess1 = prompt('what was the first phrase:');
+
+if (guess1 === phrase1) {
+  score += 1;
+
+  const guess2 = prompt('what was the second phrase:');
+
+  if (guess2 === phrase2) {
+    score += 1;
+
+    const guess3 = prompt('what was the third phrase:');
+
+    if (guess3 === phrase3) {
+      score += 1;
+    }
+  }
+}
 /* -- END: gather player 2's guesses -- */
 
-alert(`your score: ${points}`);
+alert(`your score: ${score}`);
