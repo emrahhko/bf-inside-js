@@ -11,7 +11,7 @@
 
 let userInput = '';
 let userConfirmed = false;
-while (_) {
+while (!userConfirmed) {
   userInput = prompt('enter a word to filter:');
 
   if (userInput === '' || userInput === null) {
