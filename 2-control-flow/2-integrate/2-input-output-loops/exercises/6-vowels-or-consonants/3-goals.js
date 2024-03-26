@@ -11,29 +11,30 @@
 
 let userInput = '';
 while (true) {
-  userInput = prompt('enter a word to filter:');
-
-  /* -- BEGIN: validate input -- */
-
-  /* -- END: validate input -- */
+  userInput = prompt('Enter a word to filter:');
+  if (userInput === '' || userInput === null) {
+    alert('Please enter something.');
+    continue;
+  } else {
+    break;
+  }
 }
 
-const removeVowels = confirm(`what would you like to remove from "${userInput}"?
-- ok: vowels
-- cancel: consonants
+const removeVowels = confirm(`What would you like to remove from "${userInput}"?
+- OK: vowels
+- Cancel: consonants
 `);
+
+userInput = userInput.toLowerCase();
 
 let toRemove = '';
 if (removeVowels) {
-  toRemove = 'AEIOU';
+  toRemove = /[aeiou]/g;
 } else {
-  toRemove = 'BCDFGHJKLMNPQRSTVWXYZ';
+  toRemove = /[bcdfghjklmnpqrstvwxyz]/g;
 }
 
-let filteredInput = '';
-/* -- BEGIN: filter input -- */
-
-/* -- END: filter input -- */
+let filteredInput = userInput.replace(toRemove, '');
 
 const finalMessage = `"${userInput}" -> "${filteredInput}"`;
 alert(finalMessage);
