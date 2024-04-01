@@ -18,6 +18,23 @@ while (!isDone) {
   userInput = prompt('enter a number to add, or "done" to finish');
 
   /* -- BEGIN: handle user input - nothing, done, a number or not a number -- */
+  if (userInput === '' || userInput === null) {
+    alert('no escape enter something');
+  } else if (userInput.toLowerCase() === 'done') {
+    isDone = true;
+  } else if (isNaN(userInput)) {
+    alert('"' + userInput + '" is not a number, it will be ignored!')
+  } else {
+    const nums = Number(userInput);
+    if (isNaN(nums)) {
+      alert('"' + userInput + '" is not a number it will be ignored')
+    } else {
+        sum = sum + nums;
+
+    }
+  }
+
+
   /* -- END -- */
 }
 

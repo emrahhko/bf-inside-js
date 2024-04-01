@@ -32,6 +32,11 @@ while (!userConfirmed) {
       }
     }
     /* -- BEGIN: ask the user to confirm their string and shift number -- */
+    const confirmMessage = 'are u sure about ' + userInput + ' and ' + unicodeShift + ' ? ';
+    const confirmation = confirm(confirmMessage);
+    if (confirmation) {
+      break;
+    }
     /* -- END -- */
   }
 }
@@ -39,6 +44,14 @@ while (!userConfirmed) {
 let encodedString = '';
 
 /* -- BEGIN: create the encoded string -- */
+
+for (const character of userInput) {
+  const characterCode = character.charCodeAt();
+  const newCharCode = characterCode + unicodeShift;
+  const encodedCharacter = String.fromCharCode(newCharCode);
+  encodedString += encodedCharacter;
+}
+
 /* -- END -- */
 
 const finalMessage = `"${userInput}" -> "${encodedString}"`;
