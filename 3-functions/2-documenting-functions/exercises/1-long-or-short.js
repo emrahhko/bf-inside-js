@@ -5,11 +5,11 @@
 console.log('-- begin --');
 
 /**
- * _
+ * tell if the string is longer or shorter than the limit given by the user.
  *
- * @_ {_} [_=_] - _
- * @_ {_} [_=_] - _
- * @_ {_} _
+ * @param {string} [text=''] - the string mesure.
+ * @param {number} [cutoff=0] - the limit for mesuring the string.
+ * @return {string} a string that say 'short' or 'long' depending on the result.
  */
 const longOrShort = (text = '', cutoff = 0) => {
   if (text.length < cutoff) {

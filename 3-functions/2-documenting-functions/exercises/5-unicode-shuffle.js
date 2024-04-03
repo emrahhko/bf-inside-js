@@ -5,7 +5,11 @@
 console.log('-- begin --');
 
 /**
- *
+ * 
+ * @param {string} [text =''] - the string to organize
+ * @param {number} [shift = 0] - the charcode to organize
+ * 
+ * @return {string} [text] the reorganized string.
  */
 const unicodeShuffle = (text = '', shift = 0) => {
   let encodedString = '';
