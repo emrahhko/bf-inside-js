@@ -6,6 +6,13 @@ console.log('-- begin --');
 
 /**
  *
+ * skip a number of character given by the user on a string aldo given by the user.
+ * 
+ * @param {string} [text = ''] - the string to filter.
+ * @param {number} [toSkip = 1] - the amount of character to skip.
+ * if the number to skip is less than 1 the return value will be the original string.
+ * 
+ * return {string} a string without the amount of character
  */
 const skipCharacters = (text = '', toSkip = 1) => {
   if (toSkip < 1) {

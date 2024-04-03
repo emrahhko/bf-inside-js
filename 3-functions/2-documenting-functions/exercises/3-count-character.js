@@ -6,6 +6,13 @@ console.log('-- begin --');
 
 /**
  *
+ * check if a given character appear on a string, if yes given the number of apparition
+ * 
+ * @param {string} [text = ''] - the string to check
+ * @param {string} [toCount = ''] - the character to count how many times it appear (case sensitive)
+ * if the length of character isn't 1 it will return -1
+ *
+ *  return {number} the number of times the character appear on the string
  */
 const countCharacter = (text = '', toCount = '') => {
   if (toCount.length !== 1) {
