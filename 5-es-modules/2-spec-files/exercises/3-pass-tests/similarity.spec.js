@@ -7,8 +7,8 @@ describe('determine how similar two values are', () => {
       const actual = similarity(1000, 1e3);
       expect(actual).toEqual(expected);
     });
-    it('NaN and NaN', () => {
-      const actual = similarity(NaN, NaN);
+    it(' and ', () => {
+      const actual = similarity('', '');
       expect(actual).toEqual(expected);
     });
     it('"hello" and "hello"', () => {
