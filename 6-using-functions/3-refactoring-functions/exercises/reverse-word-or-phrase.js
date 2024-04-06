@@ -29,21 +29,23 @@ if (reverseWords) {
   const splitText = original.split(' ');
   const newWords = [];
   for (const word of splitText) {
+    
+    const reversedWord = reverse(word);
     // BEGIN: refactor this to call `reverse`
-    let reversedWord = '';
-    for (let i = 0; i < word.length; i++) {
-      reversedWord = word[i] + reversedWord;
-    }
+    // let reversedWord = '';
+    // for (let i = 0; i < word.length; i++) {
+    //   reversedWord = word[i] + reversedWord;
+    // }
     // END: refactor
+
     newWords.push(reversedWord); // use the return value
   }
   reversed = newWords.join(' ');
 } else {
-  // BEGIN: refactor this to call `reverse`
-  let reversedText = '';
-  for (let i = 0; i < original.length; i++) {
-    reversedText = original[i] + reversedText;
-  }
+
+  const reversedText = reverse(original);
+
+
   // END: refactor
   reversed = reversedText; // use the return value
 }
