@@ -1,7 +1,13 @@
 import { readString, display } from '../../../lib/dom-io.js';
 
-import { _ } from './utils/_.js';
+import { reverseString } from './utils/reverse-string.js';
 
-document.getElementById(__).addEventListener('click', () => {
+document.getElementById('reverse-it').addEventListener('click', () => {
   debugger;
+
+  const userInput = readString('user-text')
+
+  const result = reverseString(userInput)
+
+  display('reversed-output', result);
 });

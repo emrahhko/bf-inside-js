@@ -1,7 +1,14 @@
 import { readNumber, readString, display } from '../../../lib/dom-io.js';
 
-import { _ } from './utils/_.js';
+import { repeatCharacters } from './utils/repeat-characters.js';
 
-document.getElementById(__).addEventListener('click', () => {
+document.getElementById('repeat-them').addEventListener('click', () => {
   debugger;
+
+  const text = readString('user-text');
+  const rep = readNumber('number-of-times');
+
+  const repeatedChars = repeatCharacters(text, rep);
+
+  display('repeated-output', repeatedChars)
 });
