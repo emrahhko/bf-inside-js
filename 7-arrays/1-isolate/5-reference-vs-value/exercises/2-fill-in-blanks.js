@@ -7,11 +7,18 @@ const deepCompare = (actual, expect) => actual === expect || Object.is(actual, e
 //  how many solutions can you find?
 // psst.  use JS Tutor & the debugger
 
-const array1 = _;
-const array2 = _;
+const array1 = [1, 2, 3, 4, 5, 6];
+const array2 = [1, 2, 3, 4, 5, 6];
+array1.push(61);
+array2.push(61);
+array1.pop(3);
+array2.pop(3);
 
 const test1 = array1 !== array2;
 console.assert(test1, 'Test 1');
 
 const test2 = deepCompare(array1, array2);
 console.assert(test2, 'Test 2');
+
+console.log(array1);
+console.log(array2);

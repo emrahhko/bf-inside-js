@@ -9,7 +9,17 @@ const deepCompare = (actual, expect) => actual === expect || Object.is(actual, e
  * @param {number[]} [arr=[]] - __
  * @returns {number[]} __
  */
-const reverseArray = () => {};
+
+console.log('begin');
+
+const reverseArray = (arr) => {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.unshift(arr [i]);
+  }
+  return result;
+
+};
 
 const _1_arg = [1, 2, 3];
 const _1_returned = reverseArray(_1_arg);
@@ -31,3 +41,5 @@ console.assert(
   deepCompare(_2_arg, [10, 11, 12, 13]),
   '2.c: _2_arg was not modified',
 );
+
+console.log('end');
