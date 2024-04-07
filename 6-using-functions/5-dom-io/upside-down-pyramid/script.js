@@ -1,7 +1,13 @@
 import { readString, display } from '../../../lib/dom-io.js';
 
-import { _ } from './utils/_.js';
+import { upsideDown } from './utils/upside-down.js';
 
-document.getElementById(__).addEventListener('click', () => {
+document.getElementById('pyramid-it').addEventListener('click', () => {
   debugger;
+
+  const userInput = readString('to-pyramid');
+
+  const result = upsideDown(userInput);
+
+  display('pyramided', result);
 });
