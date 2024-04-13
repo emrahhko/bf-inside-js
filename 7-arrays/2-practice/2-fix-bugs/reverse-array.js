@@ -8,7 +8,4 @@
  * @ return {array} the inversed array
  *
  */
-export const reverseArray = (arr = []) => {
-  return [... arr].reverse();
-
-};
+export const reverseArray = (arr = []) => [... arr].reverse();

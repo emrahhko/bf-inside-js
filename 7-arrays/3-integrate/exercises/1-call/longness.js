@@ -2,7 +2,7 @@
 
 /* ===== import functions ===== */
 
-import { filterByLength } from '__';
+import { filterByLength } from '../utils/filter-by-length.js';
 
 /* ===== main program (use functions) ===== */
 
@@ -46,7 +46,14 @@ console.log(lengthToKeep);
 // -- add the new value to each number --
 // declare a new variable named `filtered`
 //  assign it the return value from calling `filterByLength`
-_;
+const filtered = [];
+
+for (let i =0; i < allInputs.length; i++) {
+  if (allInputs[i].length >= lengthToKeep) {
+    filtered.push(allInputs[i]);
+  }
+}
+
 console.log(filtered);
 
 // -- generate a message for the user --
