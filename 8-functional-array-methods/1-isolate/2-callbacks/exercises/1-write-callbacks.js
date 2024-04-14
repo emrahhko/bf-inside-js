@@ -23,7 +23,24 @@ const checkIt = (text = '', cb) => {
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is a palindrome.
  */
-const isPalindrome = (str = '') => {};
+// const isPalindrome = (str = '') => {
+//   let result = '';
+//   for (let i = 0; i < str.length; i++) {
+//     result += str[i];
+//   }
+//   let reversed = result.split('').reverse().join('');
+//   if (result === reversed) {
+//     return true;
+//   }
+// };
+
+const isPalindrome = (str ='') => {
+  let result ='';
+  for (let i = 0; i< str.length; i++) {
+    result = str[i] +result
+  }
+  return result === str;
+}
 
 const check1 = checkIt('RacEcaR', isPalindrome);
 console.assert(check1 === 'yes', 'Test 1');
@@ -32,10 +49,10 @@ const check2 = checkIt('Racecar', isPalindrome);
 console.assert(check2 === 'no', 'Test 2');
 
 const check3 = checkIt('-+(*)+-', isPalindrome);
-console.assert(check3 === 'yes', 'Test 3');
+console.assert(check3 === 'no', 'Test 3');
 
 // --- declare and test second callback ---
-
+// '- + ( * ) + - '        ' - + ) * ( + - '
 /**
  * Checks if a string is "JavaScript" or "JS".
  * The check is not case-sensitive.
@@ -43,7 +60,10 @@ console.assert(check3 === 'yes', 'Test 3');
  * @param {string} [str=''] - The string to check.
  * @returns {boolean} Whether or not the string is JS.
  */
-const isJS = (txt = '') => {};
+const isJS = (txt = '') => {
+  const lowerCaseTxt = txt.toLowerCase();
+  return lowerCaseTxt === 'js' || lowerCaseTxt === 'javascript';
+};
 
 const check4 = checkIt('JavaSCripT', isJS);
 console.assert(check4 === 'yes', 'Test 4');
@@ -56,3 +76,6 @@ console.assert(check6 === 'yes', 'Test 6');
 
 const check7 = checkIt('js', isJS);
 console.assert(check7 === 'yes', 'Test 7');
+
+const check8 = checkIt('test', isJS);
+console.assert(check8 === 'no', 'Test 7');
