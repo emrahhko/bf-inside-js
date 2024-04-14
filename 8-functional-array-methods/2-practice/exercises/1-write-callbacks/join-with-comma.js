@@ -6,4 +6,4 @@
  * @param {string} str - the right string
  * @returns {string} the strings, joined
  */
-export const joinWithComma = () => {};
+export const joinWithComma = (acc = '', str ='') => `${acc}, ${str}`;
