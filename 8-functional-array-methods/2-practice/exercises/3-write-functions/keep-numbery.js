@@ -6,5 +6,11 @@
  * @returns {Array} - a new array of number values
  */
 export const keepNumbery = (arr = []) => {
-  return arr.map((item) => Number(item)).filter((item) => !Number.isNaN(item));
-};
+  const newArr = [];
+  arr.forEach( item => {
+    const num = Number(item);
+    if (!isNaN(num)) {
+      newArr.push(num);
+    }
+  })
+  return newArr;

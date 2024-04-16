@@ -8,14 +8,9 @@
  */
 
 export const concatenateAsStrings = (arr = []) => {
-  return arr.reduce((acc, item) => acc + String(item), '');
+  let result ='';
+  arr.forEach(item => {
+    result = result + String(item);
+  })
+  return result;
 };
-
-
-// export const concatenateAsStrings = (arr = []) => {
-//   let result = '';
-//   for (let i = 0; i < arr.length; i++) {
-//     result = result + arr[i];
-//   }
-//   return result;
-// };

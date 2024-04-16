@@ -7,6 +7,11 @@
  * @returns {Array} - a new array with no strings
  */
 export const removeStrings = (arr = []) => {
-   return arr.filter((item) => typeof item !== 'string');
+  const newArr = [];
+  arr.forEach(item => {
+    if (typeof item !== "string") {
+      newArr.push(item);
+    }
+  })
+  return newArr;
 };
-
