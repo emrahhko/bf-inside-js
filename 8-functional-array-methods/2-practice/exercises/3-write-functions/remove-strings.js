@@ -6,4 +6,12 @@
  * @param {Array} arr - the array of values to filter
  * @returns {Array} - a new array with no strings
  */
-export const removeStrings = (arr = []) => {};
+export const removeStrings = (arr = []) => {
+  const newArr = [];
+  arr.forEach(item => {
+    if (typeof item !== "string") {
+      newArr.push(item);
+    }
+  })
+  return newArr;
+};
