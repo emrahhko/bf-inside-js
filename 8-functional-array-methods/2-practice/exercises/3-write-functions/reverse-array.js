@@ -10,4 +10,3 @@
 export const reverseArray = (arr = []) => {
   const newArr = arr.slice().reverse();
   return newArr;
-};

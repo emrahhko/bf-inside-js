@@ -10,8 +10,3 @@ export const containsNoNumbers = (arr = []) => {
   return arr.every((item) => typeof item !== 'number')
 };
 
-
-
-
-
-

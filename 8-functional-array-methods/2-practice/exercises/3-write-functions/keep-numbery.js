@@ -14,4 +14,3 @@ export const keepNumbery = (arr = []) => {
     }
   })
   return newArr;
-};
